@@ -19,8 +19,8 @@ output "result" {
 }
 
 # 1. add another pet
-# 2. add another attrobute
-# 3. comment out the code above and try the alternative code below
+# 2. add another attribute
+# 3. comment out the code above and try the alternative code below which uses an array rather than a map
 
 # locals {
 #     pets = [
