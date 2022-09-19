@@ -18,16 +18,16 @@ basic training for terraform
 * terraform
 
 ## Lessons
-1.	Concept of a resource in terraform
-2.	Resource attributes
-2.1. Output
-3.	Variables
-4.	Treating variables as code
-5.	Scaling up (count)
-6.	Scaling up (write every time)
-7.	Scaling up (do not repeat yourself)
-8.	Overridable defaults
-9.	Variable defaults
+1. commands
+2. output
+3. resource
+4. attributes
+5. variables
+6. variable files
+7. count
+8. locals
+9. for and for_each
+10. modules
 
 # looping
 * for
