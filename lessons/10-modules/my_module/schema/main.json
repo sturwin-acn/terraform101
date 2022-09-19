@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "additionalProperties": false,
+    "properties": {
+        "spec": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "servers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/server"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "server": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "examples": [
+                        "server1"
+                    ]
+                },
+                "spec": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "size": {
+                            "enum": [
+                                "large",
+                                "medium",
+                                "small"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
