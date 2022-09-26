@@ -1,5 +1,5 @@
 locals {
-    pets = {
+    users = {
         steve = {
             length = 2 
         },
@@ -9,40 +9,40 @@ locals {
     }
 }
 
-resource "random_pet" "main" {
-    for_each = local.pets
+resource "random_pet" "user" {
+    for_each = local.users
     length = each.value.length
 }
 
 output "result" {
-    value  = random_pet.main
+    value  = random_pet.user
 }
 
-# 1. add another pet
+# 1. add another user
 # 2. add another attribute
 # 3. comment out the code above and try the alternative code below which uses an array rather than a map
 
 # locals {
-#     pets = [
+#     users = [
 #         {
-#             owner = "steve"
+#             name = "steve"
 #             length = 2 
 #         },
 #         {
-#             owner = "zoe" 
+#             name = "zoe" 
 #             length = 3
 #         }
 #     ]
 # }
 
-# resource "random_pet" "main" {
+# resource "random_pet" "user" {
 #     for_each = {
-#         for pet in local.pets : pet.owner => pet
+#         for user in local.users : user.name => user
 #     }
 
 #     length = each.value.length
 # }
 
 # output "result" {
-#     value  = random_pet.main
+#     value  = random_pet.user
 # }

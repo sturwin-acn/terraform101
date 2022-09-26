@@ -1,9 +1,9 @@
-resource "random_pet" "main" {
+resource "random_pet" "user" {
     count = 2
 }
 
 output "result" {
-    value  = random_pet.main
+    value  = random_pet.user
 }
 
 # 1. change the count

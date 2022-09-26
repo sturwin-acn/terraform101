@@ -1,11 +1,11 @@
 variable "length" {}
 
-resource "random_pet" "main" {
+resource "random_pet" "user" {
     length = var.length
 }
 
 output "result" {
-    value  = random_pet.main
+    value  = random_pet.user
 }
 
 # 1. change the value in the tfvars file

@@ -1,12 +1,12 @@
 variable "length" {}
 
-resource "random_pet" "main" {
-    length = 3
+resource "random_pet" "user" {
+    length = var.length
 }
 
 output "result" {
-    value  = random_pet.main
+    value  = random_pet.user
 }
 
 # 1. provide a value for the variable at run time
-# 2. assign the variable to the attribute
+# 2. add another variable for prefix

@@ -2,12 +2,12 @@ locals {
     count = 1
 }
 
-resource "random_pet" "main" {
+resource "random_pet" "user" {
     count = local.count
 }
 
 output "result" {
-    value  = random_pet.main
+    value  = random_pet.user
 }
 
 # 1. change the count local

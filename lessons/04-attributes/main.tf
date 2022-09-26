@@ -1,9 +1,9 @@
-resource "random_pet" "main" {
+resource "random_pet" "user" {
     length = 3
 }
 
 output "result" {
-    value  = random_pet.main
+    value  = random_pet.user
 }
 
 # 1. change the attribute value
