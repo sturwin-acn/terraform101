@@ -5,3 +5,11 @@ do
     terraform apply --auto-approve
     cd -
 done
+
+for i in `ls solutions`
+do
+    cd solutions/$i
+    terraform init
+    terraform apply --auto-approve
+    cd -
+done
